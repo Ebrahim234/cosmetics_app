@@ -31,22 +31,6 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
         home: ForgotPasswordView(),
-        // PageView(
-        //   children: [
-        //     SplashView(),
-        //     OnBoardingView(),
-        //     LoginView(),
-        //     CreateAccountView(),
-        //     AccountVerifyOTPView(),
-        //     AccountSuccessDialogView(),
-        //     ResetPasswordView(),
-        //     PasswordVerifyOTPView(),
-        //     CreatePasswordView(),
-        //     PasswordSuccessDialogView(),
-        //     HomeView(),
-        //     CheckoutView()
-        //   ],
-        // ) ,
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
