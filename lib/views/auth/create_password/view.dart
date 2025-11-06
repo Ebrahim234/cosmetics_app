@@ -1,14 +1,12 @@
-import 'dart:js_interop';
-
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_button/view.dart';
 import 'package:cosmetics/core/ui/app_image/view.dart';
 import 'package:cosmetics/views/auth/password_verify_otp/view.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../core/ui/app_input/view.dart';
 
-import '../widgets/input_field.dart';
+
 
 class CreatePasswordView extends StatelessWidget {
   const CreatePasswordView({super.key});
@@ -35,14 +33,14 @@ class CreatePasswordView extends StatelessWidget {
                   style: TextStyle(color: Color(0xff8E8EA9)),
                 ),
                 SizedBox(height: 80.h),
-                InputField(text: "New Password"),
+                InputField(hinttext: "New Password",borderradius: 8,),
                 SizedBox(height: 16.h),
-                InputField(text: "Confirm Password"),
+                InputField(hinttext: "Confirm Password",borderradius: 8,),
                 SizedBox(height: 70.h),
                 AppButton(title: "Confirm",onPressed: (){
                   goTo(PasswordVerifyOTPView(),canPop: false);
                 }, width: 268.w,)
-            
+
               ],
             ),
           ),

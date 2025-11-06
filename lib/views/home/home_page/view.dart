@@ -1,8 +1,10 @@
 import 'package:cosmetics/core/ui/app_image/view.dart';
-import 'package:cosmetics/core/ui/app_input/view.dart';
+
 import 'package:cosmetics/views/home/home_page/widgets/model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../core/ui/app_search/view.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
@@ -20,7 +22,7 @@ class HomePageView extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   height: 46.h,
-                  child: AppInput(),
+                  child: AppSearch(),
                 ),
                 SizedBox(height: 14.h),
                 AppImage(

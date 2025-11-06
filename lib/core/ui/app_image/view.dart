@@ -3,7 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class AppImage extends StatelessWidget {
   final String image;
-  final double height, width;
+  final double?
+  height, width;
   final Color? color;
   final BoxFit? fit;
 

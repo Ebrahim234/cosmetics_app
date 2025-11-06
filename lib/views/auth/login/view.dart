@@ -1,14 +1,12 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_image/view.dart';
-//import 'package:cosmetics/views/app_button/view.dart';
 import 'package:cosmetics/views/auth/create_account/view.dart';
 import 'package:cosmetics/views/auth/create_password/view.dart';
-import 'package:cosmetics/views/home/home_page/view.dart';
 import 'package:cosmetics/views/home/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/ui/app_button/view.dart';
-import '../widgets/input_field.dart';
+import '../../../core/ui/app_input/view.dart';
 import '../widgets/phone_field.dart';
 
 class LoginView extends StatelessWidget {
@@ -33,7 +31,7 @@ class LoginView extends StatelessWidget {
                 'Register',
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontSize: 14,
+                  fontSize: 14.sp,
                   color: Color(0xffD75D72),
                 ),
               ),
@@ -73,7 +71,7 @@ class LoginView extends StatelessWidget {
                 SizedBox(height: 30.h),
                 PhoneField(),
                 SizedBox(height: 10.h),
-                InputField(text: "Your Password"),
+                InputField(hinttext: "Your Password"),
                 Align(
                   alignment: AlignmentGeometry.centerRight,
                   child: TextButton(

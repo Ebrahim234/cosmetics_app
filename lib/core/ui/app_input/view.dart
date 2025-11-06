@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../app_image/view.dart';
-
-class AppInput extends StatelessWidget {
-  const AppInput({super.key});
+class InputField extends StatelessWidget {
+  const InputField({super.key,  this.labeltext, this.borderradius, this.hinttext,});
+final String?labeltext;
+final String?hinttext;
+final double?borderradius;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        hintText: 'Search',
-        suffixIcon: AppImage(image: "search.svg", height: 16.h, width: 16.w,fit: BoxFit.contain,),
-      ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(borderradius ?? 25)
+        ),
+        labelText: labeltext,
+        hintText: hinttext,
+        ),
     );
   }
 }

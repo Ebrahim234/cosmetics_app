@@ -2,7 +2,7 @@ import 'package:cosmetics/core/ui/app_image/view.dart';
 import 'package:cosmetics/views/checkout/view.dart';
 import 'package:cosmetics/views/home/cart/widgets/cart_items.dart';
 import 'package:cosmetics/views/home/cart/widgets/counter.dart';
-import 'package:cosmetics/views/home/widgets/bottom_navigation_bar.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

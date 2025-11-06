@@ -4,7 +4,8 @@ class AppButton extends StatelessWidget {
   const AppButton({super.key,required this.title, this.onPressed, required this.width,});
  final String title;
   final VoidCallback? onPressed;
-  final double width;
+  final double? width;
+
 
   @override
   Widget build(BuildContext context) {

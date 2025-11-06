@@ -3,7 +3,7 @@ import 'package:cosmetics/views/auth/account_success_dialog/view.dart';
 import 'package:cosmetics/views/auth/account_verify_otp/view.dart';
 import 'package:cosmetics/views/auth/create_account/view.dart';
 import 'package:cosmetics/views/auth/create_password/view.dart';
-import 'package:cosmetics/views/auth/forgot_password/reset_password.dart';
+import 'package:cosmetics/views/auth/forgot_password/view.dart';
 import 'package:cosmetics/views/auth/login/view.dart';
 import 'package:cosmetics/views/auth/password_success_dialog/view.dart';
 import 'package:cosmetics/views/auth/password_verify_otp/view.dart';
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        home: CartView(),
+        home: ForgotPasswordView(),
         // PageView(
         //   children: [
         //     SplashView(),

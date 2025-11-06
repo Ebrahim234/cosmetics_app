@@ -1,13 +1,11 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_image/view.dart';
 import 'package:cosmetics/views/auth/account_verify_otp/view.dart';
-
 import 'package:cosmetics/views/auth/login/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../core/ui/app_button/view.dart';
-import '../widgets/input_field.dart';
+import '../../../core/ui/app_input/view.dart';
 import '../widgets/phone_field.dart';
 
 class CreateAccountView extends StatelessWidget {
@@ -62,37 +60,14 @@ class CreateAccountView extends StatelessWidget {
                   ),
                ),
               SizedBox(height: 60.h),
-              InputField(text: "Your name"),
+              InputField(labeltext: "Your name",borderradius: 8,),
               SizedBox(height: 30.h),
               PhoneField(),
-              SizedBox(height: 20.h),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Create your password',
-                  style: TextStyle(
-                    color: Color(0xff434C6D),
-                    fontWeight: FontWeight.w500,
-                    fontSize: 18.sp,
-                  ),
-                ),
-              ),
+              SizedBox(height: 16.h),
               SizedBox(height: 8.h),
-              InputField(text: 'Your Password'),
-              SizedBox(height: 20.h),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Confirm password',
-                  style: TextStyle(
-                    color: Color(0xff434C6D),
-                    fontWeight: FontWeight.w500,
-                    fontSize: 18.sp,
-                  ),
-                ),
-              ),
+              InputField(hinttext: 'Your Password',borderradius: 8,),
               SizedBox(height: 8.h),
-              InputField(text: 'Your Password'),
+              InputField(labeltext: 'Your Password',borderradius: 8,),
               SizedBox(height: 36.h),
               AppButton(title: "Next",onPressed: (){goTo(AccountVerifyOTPView());}, width: 268.w,),
             ],
