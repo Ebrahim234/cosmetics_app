@@ -1,12 +1,21 @@
-import 'package:cosmetics/views/home/profile/widgets/profile_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../core/ui/app_image/view.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final categories = [
+      _model("edit.svg","Edit Profile"),
+      _model("order_history.svg","Order History"),
+      _model("wallet.svg","Wallet"),
+      _model("setting.svg","Setting"),
+      _model("voucher.svg","Voucher"),
+      _model("logout.svg","Logout"),
+    ];
     return Scaffold(
       body: Stack(
         children: [
@@ -43,18 +52,21 @@ class ProfileView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 40.h,),
-                  ProfilePages(icon: "edit.svg", title: "Edit Profile"),
-                  SizedBox(height: 20.h,),
-                  ProfilePages(icon: "order_history.svg", title: "Order History"),
-                  SizedBox(height: 20.h,),
-                  ProfilePages(icon: "wallet.svg", title: "Wallet"),
-                  SizedBox(height: 20.h,),
-                  ProfilePages(icon: "setting.svg", title: "Setting"),
-                  SizedBox(height: 20.h,),
-                  ProfilePages(icon: "voucher.svg", title: "Voucher"),
-                  SizedBox(height: 20.h,),
-                  ProfilePages(icon: "logout.svg", title: "Logout"),
-
+                  
+                  ListView.separated(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),separatorBuilder:(context, index) => SizedBox(height: 20,),itemBuilder: (context, index) {
+                    final item = categories[index];
+                    return  Row(
+                      children: [
+                        IconButton(onPressed: (){}, icon: AppImage(image: item.icon, height: 20.h, width: 20.w)),
+                        SizedBox(width: 2,),
+                        Text(item.title,style: TextStyle(fontSize:14.sp,fontWeight: FontWeight.w600),),
+                        Spacer(),
+                        IconButton(onPressed: (){}, icon: AppImage(image: "forward.svg", height: 24.h, width: 24.w))
+                      ],
+                    );
+                  },itemCount: 6,)
                 ],
               ),
             ),
@@ -63,4 +75,8 @@ class ProfileView extends StatelessWidget {
       ),
     );
   }
+}
+class _model{
+  late final String title,icon;
+  _model(this.icon,this.title);
 }

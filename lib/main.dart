@@ -11,6 +11,7 @@ import 'package:cosmetics/views/checkout/view.dart';
 import 'package:cosmetics/views/home/cart/view.dart';
 import 'package:cosmetics/views/home/cart/widgets/cart_items.dart';
 import 'package:cosmetics/views/home/categories/view.dart';
+import 'package:cosmetics/views/home/profile/view.dart';
 import 'package:cosmetics/views/home/view.dart';
 import 'package:cosmetics/views/on_boarding/view.dart';
 import 'package:cosmetics/views/splash/view.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        home: HomeView(),
+        home: ProfileView(),
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
