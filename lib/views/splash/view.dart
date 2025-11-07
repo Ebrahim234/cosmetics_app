@@ -1,10 +1,9 @@
 import 'package:cosmetics/core/ui/app_image/view.dart';
-import 'package:cosmetics/views/on_boarding/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/logic/helper_method.dart';
-import '../auth/login/view.dart';
+import '../on_boarding/view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

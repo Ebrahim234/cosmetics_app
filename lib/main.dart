@@ -10,6 +10,7 @@ import 'package:cosmetics/views/auth/password_verify_otp/view.dart';
 import 'package:cosmetics/views/checkout/view.dart';
 import 'package:cosmetics/views/home/cart/view.dart';
 import 'package:cosmetics/views/home/cart/widgets/cart_items.dart';
+import 'package:cosmetics/views/home/categories/view.dart';
 import 'package:cosmetics/views/home/view.dart';
 import 'package:cosmetics/views/on_boarding/view.dart';
 import 'package:cosmetics/views/splash/view.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        home: ForgotPasswordView(),
+        home: HomeView(),
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
             hintStyle: TextStyle(color: const Color(0xff8E8EA9),fontWeight: FontWeight.w500,fontSize: 12.sp),
             suffixIconColor: const Color(0xff8E8EA9),
             border: OutlineInputBorder(
-                borderSide: const BorderSide(color: Color(0xff5A669066)),
+                borderSide: const BorderSide(color: Color(0x5A669066)),
                 borderRadius: BorderRadius.circular(25.r)
             ),
             labelStyle: const TextStyle(color: Color(0xff8E8EA9)),
