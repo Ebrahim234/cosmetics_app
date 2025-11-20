@@ -87,7 +87,7 @@ class LoginView extends StatelessWidget {
                 AppButton(
                   title: "Login",
                   onPressed: () {
-                    goTo(HomeView());
+                    goTo(HomeView(),canPop: true);
                   },
                   width: 268.w,
                 ),
