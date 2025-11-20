@@ -33,9 +33,9 @@ class CreatePasswordView extends StatelessWidget {
                   style: TextStyle(color: Color(0xff8E8EA9)),
                 ),
                 SizedBox(height: 80.h),
-                InputField(hinttext: "New Password",borderradius: 8,),
+                AppInput(hinttext: "New Password",borderradius: 8,withCountryCode: false),
                 SizedBox(height: 16.h),
-                InputField(hinttext: "Confirm Password",borderradius: 8,),
+                AppInput(hinttext: "Confirm Password",borderradius: 8,withCountryCode: false),
                 SizedBox(height: 70.h),
                 AppButton(title: "Confirm",onPressed: (){
                   goTo(PasswordVerifyOTPView(),canPop: false);

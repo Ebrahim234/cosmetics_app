@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/ui/app_button/view.dart';
 import '../../../core/ui/app_input/view.dart';
-import '../widgets/phone_field.dart';
+
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -15,29 +15,26 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Don't have an account?",
-            ),
-            TextButton(
-              onPressed: () {
-                goTo(CreateAccountView()
-                );
-              },
-              child: Text(
-                'Register',
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14.sp,
-                  color: Color(0xffD75D72),
-                ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Don't have an account?"),
+          TextButton(
+            onPressed: () {
+              goTo(CreateAccountView());
+            },
+            child: Text(
+              'Register',
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 14.sp,
+                color: Color(0xffD75D72),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -46,7 +43,7 @@ class LoginView extends StatelessWidget {
               children: [
                 SizedBox(height: 40.h),
                 AppImage(image: "three_logos.png", height: 227.h, width: 284.w),
-                SizedBox(height: 24.h,),
+                SizedBox(height: 24.h),
                 Center(
                   child: Text(
                     'Login Now',
@@ -68,26 +65,32 @@ class LoginView extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 30.h),
-                PhoneField(),
+                SizedBox(height: 24.h),
+                AppInput(withCountryCode: true,labeltext: "Phone Number",),
                 SizedBox(height: 10.h),
-                InputField(hinttext: "Your Password"),
+                AppInput(
+                  labeltext: "Your Password",
+                  borderradius: 8,
+                  suffixicon: "visibility_off.svg",
+                    withCountryCode: false
+                ),
                 Align(
-                  alignment: AlignmentGeometry.centerRight,
+                  alignment: AlignmentDirectional.centerEnd,
                   child: TextButton(
                     onPressed: () {
                       goTo(CreatePasswordView());
                     },
-                    child: Text(
-                      'Forgot your password?',
-                    ),
+                    child: Text('Forgot your password?'),
                   ),
                 ),
                 SizedBox(height: 42.h),
-
-                AppButton(title: "Login",onPressed: (){
-                  goTo(HomeView());
-                }, width: 268.w,),
+                AppButton(
+                  title: "Login",
+                  onPressed: () {
+                    goTo(HomeView());
+                  },
+                  width: 268.w,
+                ),
               ],
             ),
           ),

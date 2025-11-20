@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/ui/app_button/view.dart';
 import '../../../core/ui/app_input/view.dart';
-import '../widgets/phone_field.dart';
 
 class CreateAccountView extends StatelessWidget {
   const CreateAccountView({super.key});
@@ -60,14 +59,13 @@ class CreateAccountView extends StatelessWidget {
                   ),
                ),
               SizedBox(height: 60.h),
-              InputField(labeltext: "Your name",borderradius: 8,),
+              AppInput(labeltext: "Your name",borderradius: 8,withCountryCode: false),
               SizedBox(height: 30.h),
-              PhoneField(),
+              AppInput(withCountryCode: true,labeltext: "Phone Number",),
               SizedBox(height: 16.h),
-              SizedBox(height: 8.h),
-              InputField(hinttext: 'Your Password',borderradius: 8,),
-              SizedBox(height: 8.h),
-              InputField(labeltext: 'Your Password',borderradius: 8,),
+              AppInput(hinttext: 'Create Your Password',borderradius: 8,withCountryCode: false,suffixicon: 'visibility_off.svg',),
+              SizedBox(height: 16.h),
+              AppInput(labeltext: 'Confirm Password',borderradius: 8,withCountryCode: false,),
               SizedBox(height: 36.h),
               AppButton(title: "Next",onPressed: (){goTo(AccountVerifyOTPView());}, width: 268.w,),
             ],

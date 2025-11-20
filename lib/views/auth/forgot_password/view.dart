@@ -1,11 +1,12 @@
 
 import 'package:cosmetics/core/ui/app_image/view.dart';
+import 'package:cosmetics/core/ui/app_input/view.dart';
 //import 'package:cosmetics/views/app_button/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/ui/app_button/view.dart';
-import '../widgets/phone_field.dart';
+
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});
@@ -31,7 +32,7 @@ class ForgotPasswordView extends StatelessWidget {
                 style: TextStyle(color: Color(0xff8E8EA9)),
               ),
               SizedBox(height: 40.h),
-              PhoneField(),
+             AppInput(withCountryCode: true,labeltext: "Phone Number",),
               SizedBox(height: 40.h),
               AppButton(title: "Next", width: 268.w,)
             ],
