@@ -69,6 +69,7 @@ class LoginView extends StatelessWidget {
                 AppInput(withCountryCode: true,labeltext: "Phone Number",),
                 SizedBox(height: 10.h),
                 AppInput(
+                  isPassword: true,
                   labeltext: "Your Password",
                   borderradius: 8,
                   suffixicon: "visibility_off.svg",

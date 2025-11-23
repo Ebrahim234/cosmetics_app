@@ -1,10 +1,13 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
+import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_image/view.dart';
+import 'package:cosmetics/views/auth/create_password/view.dart';
 //import 'package:cosmetics/views/app_button/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/ui/app_button/view.dart';
 import '../widgets/Pin_code_text_field.dart';
+import '../widgets/circular_countdown_timer.dart';
 
 class PasswordVerifyOTPView extends StatelessWidget {
   const PasswordVerifyOTPView({super.key});
@@ -19,7 +22,7 @@ class PasswordVerifyOTPView extends StatelessWidget {
             children: [
               SizedBox(height: 80.h),
               Center(child:
-              AppImage(image: "Layer.png", height:62.h, width: 67.sp)
+              AppImage(image: "logo.png", height:62.h, width: 67.sp)
               ),
               Text(
                 'Verify Code',
@@ -79,37 +82,9 @@ class PasswordVerifyOTPView extends StatelessWidget {
               ),
               SizedBox(height: 20.h),
               MyPinCodeTextField(),
-              Row(
-                children: [
-                  Text(
-                    "Didn't recieve a code?",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14.sp,
-                      color: Color(0xff434C6D),
-                    ),
-                  ),
-                  Text(
-                    "Resend",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14.sp,
-                      color: Color(0xffD75D72),
-                    ),
-                  ),
-                  Spacer(),
-                  CircularCountDownTimer(
-                    width: 50.w,
-                    height: 50.h,
-                    duration: 60,
-                    fillColor: Colors.transparent,
-                    ringColor: Colors.transparent,
-                    isReverse: true,
-                  ),
-                ],
-              ),
+              CircularCountdownTimer(),
               SizedBox(height: 90.h),
-              AppButton(title: "Done", width: 268.w,),
+              AppButton(title: "Done", width: 268.w,onPressed: (){goTo(CreatePasswordView());},),
             ],
           ),
         ),

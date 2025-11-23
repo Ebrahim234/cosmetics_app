@@ -12,7 +12,6 @@ class AppButton extends StatelessWidget {
     return SizedBox(width: width,
       child: FilledButton(
         onPressed: onPressed,
-      style: ButtonStyle(),
         child: Text(
           title,
         ),

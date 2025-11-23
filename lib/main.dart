@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        home: SplashView(),
+        home: CreateAccountView(),
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
           ),
           filledButtonTheme: FilledButtonThemeData(
             style: FilledButton.styleFrom(
-              backgroundColor: const Color(0xffD75D72),
+              backgroundColor:  Color(0xffD75D72),
               textStyle: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w600,color:Colors.white),
               fixedSize: Size.fromHeight(65.h),
               shape: RoundedRectangleBorder(

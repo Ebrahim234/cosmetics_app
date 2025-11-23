@@ -1,5 +1,7 @@
+import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_button/view.dart';
 import 'package:cosmetics/core/ui/app_image/view.dart';
+import 'package:cosmetics/views/home/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,7 +27,7 @@ class PasswordSuccessDialogView extends StatelessWidget {
               ]
             )),
           SizedBox(height: 26.h,),
-          AppButton(title: "Go to home", width: 268.w,)
+          AppButton(title: "Go to home", width: 268.w,onPressed: (){goTo(HomeView());},)
         ],
       ),
     );

@@ -11,7 +11,15 @@ class AppSearch extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
         hintText: 'Search',
-        suffixIcon: AppImage(image: "search.svg", height: 16.h, width: 16.w,fit: BoxFit.contain,),
+        suffixIcon: Padding(
+          padding: EdgeInsets.all(12.w),
+          child: AppImage(
+            image: "search.svg",
+            height: 16.h,
+            width: 16.w,
+            fit: BoxFit.contain,
+          ),
+        ),
       ),
     );
   }

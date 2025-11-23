@@ -48,7 +48,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   alignment: Alignment.topRight,
                   child: TextButton(
                     onPressed: () {
-                      currentView++;
+                      goTo(LoginView());
+                      // currentView++;
                       setState(() {});
                     },
                     child: Text(

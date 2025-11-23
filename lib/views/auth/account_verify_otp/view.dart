@@ -1,6 +1,8 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/views/auth/account_success_dialog/view.dart';
+import 'package:cosmetics/views/auth/widgets/circular_countdown_timer.dart';
+
 //import 'package:cosmetics/views/app_button/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,10 +23,15 @@ class AccountVerifyOTPView extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 46.h),
-                Center(child: AppImage(image: "Layer.png", height:62.h, width: 67.w)),
+                Center(
+                  child: AppImage(image: "logo.png", height: 62.h, width: 67.w),
+                ),
                 Text(
                   'Verify Code',
-                  style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w700),
+                  style: TextStyle(
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
                 SizedBox(height: 40.h),
                 Text.rich(
@@ -80,37 +87,16 @@ class AccountVerifyOTPView extends StatelessWidget {
                 ),
                 SizedBox(height: 20.h),
                 MyPinCodeTextField(),
-                Row(
-                  children: [
-                    Text(
-                      "Didn't recieve a code?",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 14.sp,
-                        color: Color(0xff434C6D),
-                      ),
-                    ),
-                    Text(
-                      "Resend",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 14.sp,
-                        color: Color(0xffD75D72),
-                      ),
-                    ),
-                    Spacer(),
-                    CircularCountDownTimer(
-                      width: 50.w,
-                      height: 50.h,
-                      duration: 60,
-                      fillColor: Colors.transparent,
-                      ringColor: Colors.transparent,
-                      isReverse: true,
-                    ),
-                  ],
-                ),
+                CircularCountdownTimer(),
                 SizedBox(height: 90.h),
-                AppButton(title: "Done",onPressed: () { goTo(AccountSuccessDialogView() );;}, width: 268.w,),
+                AppButton(
+                  title: "Done",
+                  onPressed: () {
+                    goTo(AccountSuccessDialogView());
+                    ;
+                  },
+                  width: 268.w,
+                ),
               ],
             ),
           ),

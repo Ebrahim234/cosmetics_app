@@ -13,11 +13,10 @@ class CreateAccountView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children:
-            [
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
           Text(
             "have an account?",
             style: TextStyle(
@@ -28,46 +27,69 @@ class CreateAccountView extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              goTo( LoginView());
+              goTo(LoginView());
             },
             child: Text(
               'Login',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
-                fontSize: 14,
+                fontSize: 14.sp,
                 color: Color(0xffD75D72),
               ),
             ),
           ),
-        ]),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
               SizedBox(height: 48.h),
-              Center(child: AppImage(image: "Layer.png", height:62.h, width: 67.w)),
+              Center(
+                child: AppImage(image: "logo.png", height: 62.h, width: 67.w),
+              ),
               SizedBox(height: 40.h),
-               Center(
-                 child: Text(
-                    'Create account',
-                    style: TextStyle(
-                      fontSize: 24.sp,
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xff434C6D),
-                    ),
+              Center(
+                child: Text(
+                  'Create account',
+                  style: TextStyle(
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xff434C6D),
                   ),
-               ),
+                ),
+              ),
               SizedBox(height: 60.h),
-              AppInput(labeltext: "Your name",borderradius: 8,withCountryCode: false),
+              AppInput(
+                labeltext: "Your name",
+                borderradius: 8.r,
+                withCountryCode: false,
+              ),
               SizedBox(height: 30.h),
-              AppInput(withCountryCode: true,labeltext: "Phone Number",),
+              AppInput(withCountryCode: true, labeltext: "Phone Number"),
               SizedBox(height: 16.h),
-              AppInput(hinttext: 'Create Your Password',borderradius: 8,withCountryCode: false,suffixicon: 'visibility_off.svg',),
+              AppInput(
+                hinttext: 'Create Your Password',
+                borderradius: 8.r,
+                withCountryCode: false,
+                isPassword: true,
+              ),
               SizedBox(height: 16.h),
-              AppInput(labeltext: 'Confirm Password',borderradius: 8,withCountryCode: false,),
+              AppInput(
+                labeltext: 'Confirm Password',
+                borderradius: 8.r,
+                withCountryCode: false,
+                isPassword: true,
+              ),
               SizedBox(height: 36.h),
-              AppButton(title: "Next",onPressed: (){goTo(AccountVerifyOTPView());}, width: 268.w,),
+              AppButton(
+                title: "Next",
+                onPressed: () {
+                  goTo(AccountVerifyOTPView());
+                },
+                width: 268.w,
+              ),
             ],
           ),
         ),

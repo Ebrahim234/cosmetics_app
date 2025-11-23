@@ -1,6 +1,9 @@
 
+import 'package:cosmetics/core/logic/helper_method.dart';
+import 'package:cosmetics/core/ui/app_back/view.dart';
 import 'package:cosmetics/core/ui/app_image/view.dart';
 import 'package:cosmetics/core/ui/app_input/view.dart';
+import 'package:cosmetics/views/auth/password_verify_otp/view.dart';
 //import 'package:cosmetics/views/app_button/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,8 +22,8 @@ class ForgotPasswordView extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              SizedBox(height: 46.h),
-              Center(child:  AppImage(image: "Layer.png", height:62.h , width: 67.w)),
+              AppBack(),
+              Center(child:  AppImage(image: "logo.png", height:62.h , width: 67.w)),
               SizedBox(height: 40.h),
               Text(
                 'Reset Password',
@@ -34,7 +37,7 @@ class ForgotPasswordView extends StatelessWidget {
               SizedBox(height: 40.h),
              AppInput(withCountryCode: true,labeltext: "Phone Number",),
               SizedBox(height: 40.h),
-              AppButton(title: "Next", width: 268.w,)
+              AppButton(title: "Next", width: 268.w,onPressed: (){goTo(PasswordVerifyOTPView());},)
             ],
           ),
         ),
