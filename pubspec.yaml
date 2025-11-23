@@ -19,6 +19,7 @@ dependencies:
   google_maps_flutter: ^2.13.1
   flutter_screenutil: ^5.9.3
   flutter_intl_phone_field: ^0.0.7
+  lottie: ^3.3.2
 
 dev_dependencies:
   flutter_test:
@@ -26,14 +27,14 @@ dev_dependencies:
   flutter_lints: ^5.0.0
 
 
-
-# The following section is specific to Flutter packages.
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
     - assets/svg/
     - assets/fonts/
+    - assets/lotties/
+
 
 
   fonts:

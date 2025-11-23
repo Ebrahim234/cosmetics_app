@@ -1,8 +1,10 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_button/view.dart';
-import 'package:cosmetics/views/auth/login/view.dart';
+import 'package:cosmetics/core/ui/app_image/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../home/view.dart';
 
 class AccountSuccessDialogView extends StatelessWidget {
   const AccountSuccessDialogView({super.key});
@@ -14,7 +16,7 @@ class AccountSuccessDialogView extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
       title: Column(
         children: [
-          Image.asset("assets/images/success_check.png"),
+          AppImage(image: "success.json", height: 100, width: 100,fit: BoxFit.contain),
           SizedBox(height: 26.h),
           Text.rich(
             textAlign: TextAlign.center,
@@ -45,7 +47,7 @@ class AccountSuccessDialogView extends StatelessWidget {
             title: "Return to login",
             width: 268.w,
             onPressed: () {
-              goTo(LoginView());
+              goTo(HomeView());
             },
           ),
         ],

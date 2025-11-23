@@ -70,7 +70,7 @@ class CreateAccountView extends StatelessWidget {
               AppInput(withCountryCode: true, labeltext: "Phone Number"),
               SizedBox(height: 16.h),
               AppInput(
-                hinttext: 'Create Your Password',
+                labeltext: 'Create Your Password',
                 borderradius: 8.r,
                 withCountryCode: false,
                 isPassword: true,

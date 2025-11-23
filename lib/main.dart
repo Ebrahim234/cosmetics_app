@@ -42,10 +42,10 @@ class MyApp extends StatelessWidget {
           ),
           inputDecorationTheme: InputDecorationTheme(
             contentPadding: EdgeInsets.symmetric(horizontal: 16.w),
-            hintStyle: TextStyle(color: const Color(0xff8E8EA9),fontWeight: FontWeight.w500,fontSize: 12.sp),
+            hintStyle: TextStyle(color: const Color(0xff8E8EA9),fontWeight: FontWeight.w400,fontSize: 12.sp),
             suffixIconColor: const Color(0xff8E8EA9),
             border: OutlineInputBorder(
-                borderSide: const BorderSide(color: Color(0x5A669066)),
+                borderSide: const BorderSide(color: Color(0x5AB4C3B4)),
                 borderRadius: BorderRadius.circular(25.r)
             ),
             labelStyle: const TextStyle(color: Color(0xff8E8EA9)),
