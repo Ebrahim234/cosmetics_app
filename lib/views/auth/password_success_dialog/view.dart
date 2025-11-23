@@ -28,7 +28,7 @@ class PasswordSuccessDialogView extends StatelessWidget {
               ]
             )),
           SizedBox(height: 26.h,),
-          AppButton(title: "Go to home", width: 268.w,onPressed: (){goTo(LoginView());},)
+          AppButton(title: "Go to login", width: 268.w,onPressed: (){goTo(LoginView());},)
         ],
       ),
     );
