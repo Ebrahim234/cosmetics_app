@@ -1,11 +1,9 @@
+import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_image/view.dart';
 import 'package:cosmetics/views/checkout/view.dart';
 import 'package:cosmetics/views/home/cart/widgets/cart_items.dart';
-import 'package:cosmetics/views/home/cart/widgets/counter.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CartView extends StatelessWidget {
   const CartView({super.key});
@@ -36,9 +34,7 @@ class CartView extends StatelessWidget {
                       ),
                       IconButton(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => CheckoutView(),));
+                          goTo(CheckoutView());
                         },
                         icon: AppImage(image: "checkout_icon.svg", height: 24.h, width: 24.w,)
                       ),

@@ -20,7 +20,8 @@ class CheckoutContainer extends StatelessWidget {
       height: 65.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius.r),
-        border: Border.all(color: Color(0xff73B9BB))),
+        border: Border.all(color: Color(0xff73B9BB)),
+      ),
       child: widget,
     );
   }

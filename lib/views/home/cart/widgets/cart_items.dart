@@ -23,10 +23,8 @@ class CartItems extends StatefulWidget {
 class _ViewState extends State<CartItems> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
+    return SizedBox(
       height: 102.h,
-      decoration: BoxDecoration(),
       child: Row(
         children: [
           ClipRRect(
@@ -43,11 +41,12 @@ class _ViewState extends State<CartItems> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 8),
-            child: Expanded(
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+
                 children: [
                   Text(
                     widget.name,
@@ -65,10 +64,11 @@ class _ViewState extends State<CartItems> {
                     widget.price,
                     style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12.sp),
                   ),
-    //Spacer(),
+                  Align(
+                      alignment: AlignmentDirectional.centerEnd,
+                      child: Counter()),
 
-    Align(alignment: AlignmentDirectional.centerEnd,
-          child: Counter()),
+
 
                 ],
               ),

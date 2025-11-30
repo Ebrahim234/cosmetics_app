@@ -1,3 +1,4 @@
+import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_button/view.dart';
 import 'package:cosmetics/views/checkout/widgets/checkout_container.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,9 +9,11 @@ import 'package:flutter/material.dart';
 
 class CheckoutView extends StatefulWidget {
   const CheckoutView({super.key});
+
   @override
   State<CheckoutView> createState() => _CheckoutViewState();
 }
+
 class _CheckoutViewState extends State<CheckoutView> {
   String? selectedValue;
 
@@ -30,10 +33,8 @@ class _CheckoutViewState extends State<CheckoutView> {
                       radius: 20.r,
                       child: IconButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => CartView()),
-                          );
+                          //
+                          goTo(CartView());
                         },
                         icon: AppImage(
                           image: "arrowleft.svg",
@@ -150,7 +151,11 @@ class _CheckoutViewState extends State<CheckoutView> {
                         radius: 40.r,
                         widget: Row(
                           children: [
-                            AppImage(image: "visa.svg", height: 20.h, width: 30.w),
+                            AppImage(
+                              image: "visa.svg",
+                              height: 20.h,
+                              width: 30.w,
+                            ),
                             SizedBox(width: 8.w),
                             Expanded(
                               child: DropdownButton<String>(
@@ -268,7 +273,16 @@ class _CheckoutViewState extends State<CheckoutView> {
                         children: [Text("TOTAL + VAT"), Text("161.00 EGP")],
                       ),
                       SizedBox(height: 40.h),
-                      Center(child: AppButton(title: "ORDER", width: 268.w,)),
+                      Center(
+                        child: AppButton(
+                          icon: AppImage(image: "white_cart.svg", height: 24, width: 24),
+                          title: "ORDER",
+                          width: 268.w,
+                          onPressed: () {
+                            goTo(CartView());
+                          },
+                        ),
+                      ),
                     ],
                   ),
                 ),

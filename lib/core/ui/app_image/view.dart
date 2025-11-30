@@ -4,8 +4,8 @@ import 'package:lottie/lottie.dart';
 
 class AppImage extends StatelessWidget {
   final String image;
-  final double?
-  height, width;
+  final double?height, width;
+  final bool isCircle;
   final Color? color;
   final BoxFit? fit;
 
@@ -16,6 +16,7 @@ class AppImage extends StatelessWidget {
     required this.width,
     this.color,
     this.fit,
+    this.isCircle = false,
   });
 
   @override

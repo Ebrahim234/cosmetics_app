@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {
-  const AppButton({super.key,required this.title, this.onPressed, required this.width,});
+  const AppButton({super.key,required this.title, this.onPressed, required this.width, this.icon,});
  final String title;
   final VoidCallback? onPressed;
   final double? width;
+  final Widget? icon;
 
 
   @override
@@ -12,10 +13,14 @@ class AppButton extends StatelessWidget {
     return SizedBox(width: width,
       child: FilledButton(
         onPressed: onPressed,
-        child: Text(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [ Text(
           title,
         ),
-      ),
+            if (icon != null) icon!,
+]
+        )     ),
     );
         }
         }

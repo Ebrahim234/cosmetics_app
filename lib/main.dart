@@ -1,19 +1,7 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
-import 'package:cosmetics/views/auth/account_success_dialog/view.dart';
-import 'package:cosmetics/views/auth/account_verify_otp/view.dart';
-import 'package:cosmetics/views/auth/create_account/view.dart';
-import 'package:cosmetics/views/auth/create_password/view.dart';
-import 'package:cosmetics/views/auth/forgot_password/view.dart';
-import 'package:cosmetics/views/auth/login/view.dart';
-import 'package:cosmetics/views/auth/password_success_dialog/view.dart';
 import 'package:cosmetics/views/auth/password_verify_otp/view.dart';
-import 'package:cosmetics/views/checkout/view.dart';
 import 'package:cosmetics/views/home/cart/view.dart';
-import 'package:cosmetics/views/home/cart/widgets/cart_items.dart';
-import 'package:cosmetics/views/home/categories/view.dart';
 import 'package:cosmetics/views/home/profile/view.dart';
-import 'package:cosmetics/views/home/view.dart';
-import 'package:cosmetics/views/on_boarding/view.dart';
 import 'package:cosmetics/views/splash/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,7 +20,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        home: PasswordVerifyOTPView(),
+        home: CartView(),
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(

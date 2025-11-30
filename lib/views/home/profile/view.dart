@@ -77,6 +77,6 @@ class ProfileView extends StatelessWidget {
   }
 }
 class _model{
-  late final String title,icon;
+   final String title,icon;
   _model(this.icon,this.title);
 }

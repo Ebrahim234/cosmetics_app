@@ -27,9 +27,8 @@ class _CounterState extends State<Counter> {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: AlignmentDirectional.centerEnd,
-      child: SizedBox(
+    return
+      Container(
         width: 142,
         height: 42,
         child: DecoratedBox(
@@ -38,7 +37,7 @@ class _CounterState extends State<Counter> {
             borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               IconButton(
                 onPressed: decrease,
@@ -55,7 +54,7 @@ class _CounterState extends State<Counter> {
             ],
           ),
         ),
-      ),
-    );
+      );
+
   }
 }
