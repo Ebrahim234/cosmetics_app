@@ -31,7 +31,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    - assets/svg/
+    - assets/icons/
     - assets/fonts/
     - assets/lotties/
 
@@ -40,7 +40,7 @@ flutter:
   fonts:
     - family: Montserrat
       fonts:
-        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/montserrat.ttf
 
 
 

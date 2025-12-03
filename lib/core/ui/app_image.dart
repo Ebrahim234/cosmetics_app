@@ -1,0 +1,66 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lottie/lottie.dart';
+
+class AppImage extends StatelessWidget {
+  final String image;
+  final double? height, width;
+  final bool isCircle;
+  final Color? color;
+  final BoxFit fit;
+  final double borderRadius;
+
+  const AppImage({
+    super.key,
+    required this.image,
+    required this.height,
+    required this.width,
+    this.color,
+    this.fit = BoxFit.cover,
+    this.isCircle = false,
+    this.borderRadius = 0,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    Widget child;
+
+    if (image.toLowerCase().endsWith(".svg")) {
+      child = SvgPicture.asset(
+        "assets/icons/$image",
+        width: width,
+        height: height,
+        color: color,
+      );
+    } else if (image.toLowerCase().startsWith("http")) {
+      child = Image.network(
+        image,
+        width: width,
+        height: height,
+        color: color,
+        fit: fit,
+      );
+    } else if (image.endsWith(".json")) {
+      child = Lottie.asset(
+        "assets/lotties/$image",
+        width: width,
+        height: height,
+        fit: fit,
+      );
+    } else {
+      child = Image.asset(
+        "assets/images/$image",
+        width: width,
+        height: height,
+        color: color,
+        fit: fit,
+      );
+    }
+
+    return ClipRRect(
+      borderRadius:
+      isCircle ? BorderRadius.circular(5000) : BorderRadius.circular(borderRadius),
+      child: child,
+    );
+  }
+}

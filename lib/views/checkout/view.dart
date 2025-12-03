@@ -1,11 +1,12 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
-import 'package:cosmetics/core/ui/app_button/view.dart';
+import 'package:cosmetics/core/ui/app_button.dart';
 import 'package:cosmetics/views/checkout/widgets/checkout_container.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:cosmetics/core/ui/app_image/view.dart';
-import 'package:cosmetics/views/home/cart/view.dart';
+import 'package:cosmetics/core/ui/app_image.dart';
 import 'package:flutter/material.dart';
+
+import '../home/pages/cart.dart';
 
 class CheckoutView extends StatefulWidget {
   const CheckoutView({super.key});

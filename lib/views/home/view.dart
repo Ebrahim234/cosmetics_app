@@ -1,7 +1,7 @@
-import 'package:cosmetics/views/home/cart/view.dart';
-import 'package:cosmetics/views/home/categories/view.dart';
-import 'package:cosmetics/views/home/home_page/view.dart';
-import 'package:cosmetics/views/home/profile/view.dart';
+import 'package:cosmetics/views/home/pages/cart.dart';
+import 'package:cosmetics/views/home/pages/categories.dart';
+import 'package:cosmetics/views/home/pages/home_page.dart';
+import 'package:cosmetics/views/home/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -68,7 +68,7 @@ class _NewHomeViewState extends State<HomeView> {
             list.length,
                 (index) =>
                 BottomNavigationBarItem(
-                  icon: SvgPicture.asset("assets/svg/${list[index].icon}", color:currentIndex==index?Theme.of(context).primaryColor:null),
+                  icon: SvgPicture.asset("assets/icons/${list[index].icon}", color:currentIndex==index?Theme.of(context).primaryColor:null),
 
                   label: "",
                 ),

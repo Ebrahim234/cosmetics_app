@@ -1,8 +1,8 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
-import 'package:cosmetics/views/auth/password_verify_otp/view.dart';
-import 'package:cosmetics/views/home/cart/view.dart';
-import 'package:cosmetics/views/home/profile/view.dart';
-import 'package:cosmetics/views/splash/view.dart';
+import 'package:cosmetics/views/auth/account_verify_otp.dart';
+import 'package:cosmetics/views/home/pages/home_page.dart';
+import 'package:cosmetics/views/home/view.dart';
+import 'package:cosmetics/views/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        home: CartView(),
+        home: HomePageView(),
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -65,8 +65,6 @@ class MyApp extends StatelessWidget {
             bodyMedium: TextStyle(color: Color(0xff434C6D)),
           ),
         ),
-      ),
-      child: null,
-    );
+      ),);
   }
 }
