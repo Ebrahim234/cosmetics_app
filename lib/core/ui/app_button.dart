@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {
-  const AppButton({super.key,required this.title, this.onPressed, required this.width, this.icon,});
+  const AppButton({super.key,required this.title, this.onPressed, this.width, this.icon,});
  final String title;
   final VoidCallback? onPressed;
-  final double? width;
+  final double? width ;
   final Widget? icon;
 
 

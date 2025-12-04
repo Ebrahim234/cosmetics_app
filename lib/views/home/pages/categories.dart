@@ -33,9 +33,10 @@ class CategoriesView extends StatelessWidget {
     ];
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
+        child: SafeArea(
           child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            padding: const EdgeInsets.all(12.0),
             child: Column(
               children: [
                 Center(

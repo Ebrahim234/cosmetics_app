@@ -41,6 +41,7 @@ class _AppInputState extends State<AppInput> {
               border: Border.all(color: Color(0x5A669066)),
             ),
             child: DropdownButton<int>(
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
               value: selectedCountryCode,
               icon: AppImage(
                 image: "dropdown_arrow.svg",

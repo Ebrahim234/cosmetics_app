@@ -1,18 +1,37 @@
 import 'package:cosmetics/core/ui/app_image.dart';
-import 'package:cosmetics/views/home/pages/home_page/widgets/productModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/ui/app_search.dart';
 
 class HomePageView extends StatelessWidget {
-   HomePageView({super.key});
-  final list = [
-    _Model(image: "https://summerfridays.com/cdn/shop/files/Main_PDP_Square_Mauve_Vanilla.jpg?v=1686004788", title: "Face tint / lip tint", price: r"$44.99"),
-    _Model(image:  "https://img.joomcdn.net/79fca485c8ba105e70df8f6d183d40eac5cf4c93_original.jpeg", title: "Athe Red lipstick", price: r"$44.99"),
-    _Model(image:  "https://dominique.com/cdn/shop/files/Brow_Frame_Brow_Blowout_Bundle.webp?v=1746052142&width=2000", title: "Athe Red lipstick", price: r"$44.99"),
-    _Model(image:  "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/216607/a81OhWLhz2ZhtCD5r6g.jpg", title: "Athe Red lipstick", price: r"$44.99"),
-  ];
+  HomePageView({super.key});
 
+  final list = [
+    _Model(
+      image:
+          "https://summerfridays.com/cdn/shop/files/Main_PDP_Square_Mauve_Vanilla.jpg?v=1686004788",
+      title: "Face tint / lip tint",
+      price: r"$44.99",
+    ),
+    _Model(
+      image:
+          "https://img.joomcdn.net/79fca485c8ba105e70df8f6d183d40eac5cf4c93_original.jpeg",
+      title: "Athe Red lipstick",
+      price: r"$44.99",
+    ),
+    _Model(
+      image:
+          "https://dominique.com/cdn/shop/files/Brow_Frame_Brow_Blowout_Bundle.webp?v=1746052142&width=2000",
+      title: "Athe Red lipstick",
+      price: r"$44.99",
+    ),
+    _Model(
+      image:
+          "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/216607/a81OhWLhz2ZhtCD5r6g.jpg",
+      title: "Athe Red lipstick",
+      price: r"$44.99",
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +61,6 @@ class HomePageView extends StatelessWidget {
                           "https://i.pinimg.com/originals/41/a3/fa/41a3faab05f1c5bd4fe43d8458971f13.jpg",
                       height: 320,
                       width: 364,
-                  
                     ),
                   ),
                 ],
@@ -69,8 +87,7 @@ class HomePageView extends StatelessWidget {
                   crossAxisSpacing: 12,
                   mainAxisSpacing: 12,
                 ),
-                itemBuilder: (context, index) =>
-                    _item(product: list[index]),
+                itemBuilder: (context, index) => _item(product: list[index]),
               ),
             ],
           ),
@@ -123,14 +140,8 @@ class _item extends StatelessWidget {
   }
 }
 
-
 class _Model {
-  final String image, title,price;
+  final String image, title, price;
 
-  _Model({
-    required this.image,
-    required this.title,
-    required this.price,
-  });
+  _Model({required this.image, required this.title, required this.price});
 }
-

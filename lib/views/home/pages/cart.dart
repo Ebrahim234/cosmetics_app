@@ -15,6 +15,7 @@ class CartView extends StatelessWidget {
       body:
       SafeArea(
           child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [

@@ -1,5 +1,6 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_image.dart';
+import 'package:cosmetics/core/ui/app_login_or_app_register.dart';
 import 'package:cosmetics/views/auth/create_account.dart';
 import 'package:cosmetics/views/auth/create_password.dart';
 import 'package:cosmetics/views/home/view.dart';
@@ -7,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/ui/app_button.dart';
 import '../../core/ui/app_input.dart';
-
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -19,20 +19,7 @@ class LoginView extends StatelessWidget {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Don't have an account?"),
-          TextButton(
-            onPressed: () {
-              goTo(CreateAccountView());
-            },
-            child: Text(
-              'Register',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 14.sp,
-                color: Color(0xffD75D72),
-              ),
-            ),
-          ),
+          AppLoginOrAppRegister()
         ],
       ),
       body: SafeArea(
@@ -65,14 +52,14 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 24.h),
-              AppInput(withCountryCode: true,labelText: "Phone Number",),
+              AppInput(withCountryCode: true, labelText: "Phone Number"),
               SizedBox(height: 10.h),
               AppInput(
                 isPassword: true,
                 labelText: "Your Password",
                 borderRadius: 8,
                 suffixIcon: "visibility_off.svg",
-                  withCountryCode: false
+                withCountryCode: false,
               ),
               Align(
                 alignment: AlignmentDirectional.centerEnd,
@@ -87,7 +74,7 @@ class LoginView extends StatelessWidget {
               AppButton(
                 title: "Login",
                 onPressed: () {
-                  goTo(HomeView(),canPop: true);
+                  goTo(HomeView(), canPop: true);
                 },
                 width: 268.w,
               ),

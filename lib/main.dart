@@ -1,7 +1,5 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
-import 'package:cosmetics/views/auth/account_verify_otp.dart';
-import 'package:cosmetics/views/home/pages/home_page.dart';
-import 'package:cosmetics/views/home/view.dart';
+import 'package:cosmetics/views/auth/login.dart';
 import 'package:cosmetics/views/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        home: HomePageView(),
+        home: LoginView(),
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -33,9 +31,10 @@ class MyApp extends StatelessWidget {
             hintStyle: TextStyle(color: const Color(0xff8E8EA9),fontWeight: FontWeight.w400,fontSize: 12.sp),
             suffixIconColor: const Color(0xff8E8EA9),
             border: OutlineInputBorder(
-                borderSide: const BorderSide(color: Color(0x5AB4C3B4)),
+                borderSide: BorderSide(color: Color(0xffB3B3C1)),
                 borderRadius: BorderRadius.circular(25.r)
             ),
+
             labelStyle: const TextStyle(color: Color(0xff8E8EA9)),
           ),
           textButtonTheme: TextButtonThemeData(
