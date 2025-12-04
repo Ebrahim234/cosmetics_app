@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/ui/app_button.dart';
 import '../../core/ui/app_input.dart';
+import '../../core/ui/app_login_or_app_register.dart';
 
 class CreateAccountView extends StatelessWidget {
   const CreateAccountView({super.key});
@@ -17,27 +18,7 @@ class CreateAccountView extends StatelessWidget {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            "have an account?",
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 14,
-              color: Color(0xff434C6D),
-            ),
-          ),
-          TextButton(
-            onPressed: () {
-              goTo(LoginView());
-            },
-            child: Text(
-              'Login',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 14.sp,
-                color: Color(0xffD75D72),
-              ),
-            ),
-          ),
+          AppLoginOrAppRegister(isLogin: false)
         ],
       ),
       body: SingleChildScrollView(

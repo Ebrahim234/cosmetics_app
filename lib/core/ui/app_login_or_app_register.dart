@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import '../../views/auth/create_account.dart';
 
 class AppLoginOrAppRegister extends StatelessWidget {
-  const AppLoginOrAppRegister({super.key});
+  final bool isLogin;
+  const AppLoginOrAppRegister({super.key, this.isLogin = true});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class AppLoginOrAppRegister extends StatelessWidget {
       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       child: Text.rich(TextSpan(
         children: [
-          TextSpan(text: "Don’t have an account?"),
+          TextSpan(text: isLogin? "Don’t have an account?": "Have an account?"),
           WidgetSpan(
               alignment: PlaceholderAlignment.middle,
               child: TextButton(
@@ -21,7 +22,7 @@ class AppLoginOrAppRegister extends StatelessWidget {
                   ),
                   onPressed: (){
                     goTo(CreateAccountView());
-                  }, child: Text("Register")))
+                  }, child: Text( isLogin?"Register": "Login")))
         ]
       )),
     );
