@@ -1,5 +1,7 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
-import 'package:cosmetics/views/auth/login.dart';
+import 'package:cosmetics/views/auth/account_verify_otp.dart';
+import 'package:cosmetics/core/ui/login.dart';
+import 'package:cosmetics/views/auth/success_dialog.dart';
 import 'package:cosmetics/views/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        home: LoginView(),
+        home: SplashView(),
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(

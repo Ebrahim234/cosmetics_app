@@ -1,7 +1,6 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_image.dart';
 import 'package:cosmetics/views/auth/account_verify_otp.dart';
-import 'package:cosmetics/views/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/ui/app_button.dart';
@@ -17,13 +16,12 @@ class CreateAccountView extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          AppLoginOrAppRegister(isLogin: false)
-        ],
+        children: [AppLoginOrAppRegister(isLogin: false)],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(height: 48.h),
             Center(
@@ -68,7 +66,7 @@ class CreateAccountView extends StatelessWidget {
               onPressed: () {
                 goTo(AccountVerifyOTPView());
               },
-              width: 268.w,
+
             ),
           ],
         ),

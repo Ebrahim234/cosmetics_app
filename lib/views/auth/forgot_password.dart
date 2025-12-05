@@ -21,6 +21,7 @@ class ForgotPasswordView extends StatelessWidget {
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               AppBack(),
               Center(child:  AppImage(image: "logo.png", height:62.h , width: 67.w)),
@@ -37,7 +38,7 @@ class ForgotPasswordView extends StatelessWidget {
               SizedBox(height: 40.h),
              AppInput(withCountryCode: true,labelText: "Phone Number",),
               SizedBox(height: 40.h),
-              AppButton(title: "Next", width: 268.w,onPressed: (){goTo(PasswordVerifyOTPView());},)
+              AppButton(title: "Next",onPressed: (){goTo(PasswordVerifyOTPView());},)
             ],
           ),
         ),

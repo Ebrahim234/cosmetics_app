@@ -1,14 +1,11 @@
-import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/views/auth/success_dialog.dart';
-import 'package:cosmetics/views/auth/widgets/circular_countdown_timer.dart';
-
-//import 'package:cosmetics/views/app_button/app_image.dart';
+import 'package:cosmetics/core/ui/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/ui/app_button.dart';
 import '../../core/ui/app_image.dart';
-import 'widgets/Pin_code_text_field.dart';
+import '../../core/ui/Pin_code_text_field.dart';
 
 class AccountVerifyOTPView extends StatelessWidget {
   const AccountVerifyOTPView({super.key});
@@ -21,12 +18,14 @@ class AccountVerifyOTPView extends StatelessWidget {
         child: SingleChildScrollView(
           child: SafeArea(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 SizedBox(height: 46.h),
                 Center(
                   child: AppImage(image: "logo.png", height: 62.h, width: 67.w),
                 ),
                 Text(
+                  textAlign: TextAlign.center,
                   'Verify Code',
                   style: TextStyle(
                     fontSize: 24.sp,
@@ -34,9 +33,12 @@ class AccountVerifyOTPView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 40.h),
-                Text.rich(style: TextStyle( fontSize: 14.sp,
-                  fontWeight: FontWeight.w400,
-                  color: Color(0xff434C6D),),
+                Text.rich(
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xff434C6D),
+                  ),
                   textAlign: TextAlign.center,
                   TextSpan(
                     children: [
@@ -45,16 +47,10 @@ class AccountVerifyOTPView extends StatelessWidget {
                       ),
                       TextSpan(
                         text: "+20 1022658997 ",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w800,
-                        ),
+                        style: TextStyle(fontWeight: FontWeight.w800),
                       ),
-                      TextSpan(
-                        text: "Enter the code in the box\n"
-                      ),
-                      TextSpan(
-                        text: "below to continue.",
-                      ),
+                      TextSpan(text: "Enter the code in the box\n"),
+                      TextSpan(text: "below to continue."),
                     ],
                   ),
                 ),
@@ -77,10 +73,9 @@ class AccountVerifyOTPView extends StatelessWidget {
                 AppButton(
                   title: "Done",
                   onPressed: () {
-                    goTo(AccountSuccessDialogView());
+                    goTo(SuccessDialog(isLogin: true));
                     ;
                   },
-                  width: 268.w,
                 ),
               ],
             ),

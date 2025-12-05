@@ -1,13 +1,13 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_image.dart';
 import 'package:cosmetics/core/ui/app_login_or_app_register.dart';
-import 'package:cosmetics/views/auth/create_account.dart';
 import 'package:cosmetics/views/auth/create_password.dart';
+import 'package:cosmetics/views/auth/forgot_password.dart';
 import 'package:cosmetics/views/home/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../core/ui/app_button.dart';
-import '../../core/ui/app_input.dart';
+import 'app_button.dart';
+import 'app_input.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -18,14 +18,13 @@ class LoginView extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          AppLoginOrAppRegister()
-        ],
+        children: [AppLoginOrAppRegister()],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               SizedBox(height: 40.h),
               AppImage(image: "three_logos.png", height: 227.h, width: 284.w),
@@ -65,7 +64,7 @@ class LoginView extends StatelessWidget {
                 alignment: AlignmentDirectional.centerEnd,
                 child: TextButton(
                   onPressed: () {
-                    goTo(CreatePasswordView());
+                    goTo(ForgotPasswordView());
                   },
                   child: Text('Forgot your password?'),
                 ),
@@ -76,7 +75,6 @@ class LoginView extends StatelessWidget {
                 onPressed: () {
                   goTo(HomeView(), canPop: true);
                 },
-                width: 268.w,
               ),
             ],
           ),

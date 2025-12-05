@@ -16,7 +16,7 @@ class AppImage extends StatelessWidget {
     required this.height,
     required this.width,
     this.color,
-    this.fit = BoxFit.cover,
+    this.fit = BoxFit.scaleDown,
     this.isCircle = false,
     this.borderRadius = 0,
   });

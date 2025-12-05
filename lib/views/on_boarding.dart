@@ -1,6 +1,6 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_image.dart';
-import 'package:cosmetics/views/auth/login.dart';
+import 'package:cosmetics/core/ui/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -102,7 +102,6 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               if (currentView == 2)
                AppButton(
 
-                 width: 268,
                   onPressed: () {
                     goTo(LoginView());
                   },

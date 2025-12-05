@@ -1,7 +1,7 @@
 import 'package:cosmetics/core/logic/helper_method.dart';
 import 'package:cosmetics/core/ui/app_button.dart';
 import 'package:cosmetics/core/ui/app_image.dart';
-import 'package:cosmetics/views/auth/password_verify_otp.dart';
+import 'package:cosmetics/views/auth/success_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/ui/app_input.dart';
@@ -16,11 +16,13 @@ class CreatePasswordView extends StatelessWidget {
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               SizedBox(height: 40.h),
               AppImage(image: "logo.png", height: 62.h, width: 67.w),
               SizedBox(height: 40.h),
               Text(
+                textAlign: TextAlign.center,
                 'Create Password',
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
@@ -48,9 +50,8 @@ class CreatePasswordView extends StatelessWidget {
               AppButton(
                 title: "Confirm",
                 onPressed: () {
-                 // goTo(PasswordSuccessDialogView(), canPop: false);
+                 goTo(SuccessDialog(isLogin: false,),);
                 },
-                width: 268.w,
               ),
             ],
           ),

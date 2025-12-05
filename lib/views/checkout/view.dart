@@ -24,6 +24,7 @@ class _CheckoutViewState extends State<CheckoutView> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Padding(
                 padding: EdgeInsets.all(13.0),
@@ -278,7 +279,6 @@ class _CheckoutViewState extends State<CheckoutView> {
                         child: AppButton(
                           icon: AppImage(image: "white_cart.svg", height: 24, width: 24),
                           title: "ORDER",
-                          width: 268.w,
                           onPressed: () {
                             goTo(CartView());
                           },

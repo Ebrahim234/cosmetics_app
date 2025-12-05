@@ -7,8 +7,8 @@ import 'package:cosmetics/views/auth/create_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/ui/app_button.dart';
-import 'widgets/Pin_code_text_field.dart';
-import 'widgets/circular_countdown_timer.dart';
+import '../../core/ui/Pin_code_text_field.dart';
+import '../../core/ui/circular_countdown_timer.dart';
 
 class PasswordVerifyOTPView extends StatelessWidget {
   const PasswordVerifyOTPView({super.key});
@@ -20,6 +20,7 @@ class PasswordVerifyOTPView extends StatelessWidget {
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               AppBack(),
               SizedBox(height: 80.h),
@@ -86,7 +87,7 @@ class PasswordVerifyOTPView extends StatelessWidget {
               MyPinCodeTextField(),
               CircularCountdownTimer(),
               SizedBox(height: 90.h),
-              AppButton(title: "Done", width: 268.w,onPressed: (){goTo(CreatePasswordView());},),
+              AppButton(title: "Done",onPressed: (){goTo(CreatePasswordView());},),
             ],
           ),
         ),

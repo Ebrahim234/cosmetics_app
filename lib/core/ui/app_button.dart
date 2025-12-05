@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppButton extends StatelessWidget {
-  const AppButton({super.key,required this.title, this.onPressed, this.width, this.icon,});
+  const AppButton({super.key,required this.title, this.onPressed,this.icon, this.color = "",});
  final String title;
   final VoidCallback? onPressed;
-  final double? width ;
   final Widget? icon;
+  final String color;
 
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(width: width,
+    return Padding(
+
+      padding: const EdgeInsets.all(8.0),
       child: FilledButton(
         onPressed: onPressed,
         child: Row(
@@ -19,7 +22,7 @@ class AppButton extends StatelessWidget {
           title,
         ),
             if (icon != null) icon!,
-]
+      ]
         )     ),
     );
         }
