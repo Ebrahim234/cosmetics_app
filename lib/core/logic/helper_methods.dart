@@ -8,7 +8,7 @@ void goTo(Widget page, {bool canPop = false, int? delayInSeconds}) {
     Navigator.pushAndRemoveUntil(
       navigatorKey.currentContext!,
       MaterialPageRoute(builder: (context) => page),
-          (route) => canPop,
+      (route) => canPop,
     );
   }
 
@@ -18,5 +18,14 @@ void goTo(Widget page, {bool canPop = false, int? delayInSeconds}) {
     });
   } else {
     action();
+  }
+}
+
+void showMsg(String msg) {
+
+  if(msg.isNotEmpty){
+    ScaffoldMessenger.of(
+      navigatorKey.currentContext!,
+    ).showSnackBar(SnackBar(content: Text(msg)));
   }
 }

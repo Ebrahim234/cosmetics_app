@@ -58,7 +58,8 @@ class HomePageView extends StatelessWidget {
                     clipBehavior: Clip.antiAlias,
                     child: AppImage(
                       image:
-                          "https://i.pinimg.com/originals/41/a3/fa/41a3faab05f1c5bd4fe43d8458971f13.jpg",
+                          "https://www.lauramercier.com/cdn/shop/files/LM_1Q25_TMND_WHATSNEW_D_NOCOPY.jpg?v=1735216113",
+                      borderRadius: 10,//
                       height: 320,
                       width: 364,
                     ),
